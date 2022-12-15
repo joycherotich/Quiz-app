@@ -17,43 +17,49 @@ const scoreText = document.getElementById("score");
 const questionCounterText = document.getElementById("questionCounter");
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 5;
+const MAX_QUESTIONS = 10;
 
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+
+fetch(
+  'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
+)
+  .then((res) => {
+      return res.json();
+  })
+  .then((loadedQuestions) => {
+      questions = loadedQuestions.results.map((loadedQuestion) => {
+          const formattedQuestion = {
+              question: loadedQuestion.question,
+          };
+
+          const answerChoices = [...loadedQuestion.incorrect_answers];
+          formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+          answerChoices.splice(
+              formattedQuestion.answer - 1,
+              0,
+              loadedQuestion.correct_answer
+          );
+
+          answerChoices.forEach((choice, index) => {
+              formattedQuestion['choice' + (index + 1)] = choice;
+          });
+
+          return formattedQuestion;
+      });
+      startGame();
+  })
+  .catch((err) => {
+      console.error(err);
+  });
+
+
 //TODO: load form json file
-let questions = [
-  {
-   question: "Inside which HTML element do we put the JavaScript??",
-    choice1: "script",
-    choice2: "javascript",
-    choice3: "js",
-    choice4: "scripting",
-    answer: 1,
-    
 
-
-  },
-  {
-    question: "Which country was not part of world cup 2022?",
-    choice1: "M0rocco",
-    choice2: "Kenya",
-    choice3: "Croatia",
-    choice4: "Brazil",
-    answer: 2
-  },
-  {
-    "question": " How do you write 'Hello World' in an alert box?",
-    "choice1": "msgBox('Hello World');",
-    "choice2": "alertBox('Hello World');",
-    "choice3": "msg('Hello World');",
-    "choice4": "alert('Hello World');",
-    "answer": 4
-  }
-];
 
 //End Screen Elements
 const finalScore = document.getElementById("finalScore");

@@ -1,8 +1,9 @@
 body{
-  background-color: rgb(32, 196, 218);
+  background-color: blue;
+  
 }
 html {
-  margin: 10;
+  margin: 30;
   padding: 0;
 }
 * {
@@ -10,16 +11,20 @@ html {
   box-sizing: border-box;
 }
 root {
-  background-color: #ecf5ff;
-  font-size: 62.5%;
+  background-color: black;
+  font-size: 60%;
+}
+.img{
+  border-width: 0em;
+  height:fit-content;
 }
 
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: italic;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: black;
 }
 
 h1,
@@ -41,9 +46,9 @@ h1 > span {
 }
 
 h2 {
-  font-size: 4.2rem;
+  font-size: 2rem;
   margin-bottom: 4rem;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 h3 {
@@ -83,7 +88,7 @@ h3 {
 }
 
 .text-center {
-  text-align: center;
+  text-align: left;
 }
 
 .hidden {
@@ -100,7 +105,7 @@ h3 {
   margin-bottom: 1rem;
   text-decoration: none;
   color: #56a5eb;
-  background-color: white;
+  background-color: black;
 }
 
 .btn:hover {
@@ -130,7 +135,7 @@ input {
   padding: 1.5rem;
   font-size: 1.8rem;
   border: none;
-  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(152, 19, 156, 0.5);
 }
 
 input::placeholder {
@@ -308,7 +313,7 @@ input::placeholder {
   }
   100% {
     border-color: black;
-    background-color: white;
+    background-color: rgb(122, 29, 29);
   }
 }
 

@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <img src="https://codelikeadev.com/img/logo-3.png" alt="Code Like A Dev Logo" style="width:900px">
     <div class="container">
       <div id="home" class="page flex-center flex-column ">
         <h1>Quick Quiz</h1>
+        
         <form>
           <label for="username">Username</label>
           <input type="text" name="username" id="username" />
@@ -33,7 +35,7 @@
       <div id="game" class="page hidden justify-center flex-column ">
         <button onClick="navigateTo('home')">Go Home</button>
         <div id="hud">
-          <h3 id="questionCounter">Question 1/5</h3>
+          <h3 id="questionCounter">Question 1/10</h3>
           <h3 id="score">Score: 0</h3>
         </div>
         <h2 id="question">What is the name of the thing?!</h2>
@@ -53,6 +55,7 @@
           <p class="choice-prefix">D</p>
           <p class="choice" data-number="4">Choice 4!</p>
         </div>
+        
       </div>
 
       <div id="end" class="page hidden flex-center flex-column">
