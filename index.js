@@ -18,6 +18,16 @@ const questionCounterText = document.getElementById("questionCounter");
 
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
+startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuesions = [...questions];
+  getNewQuestion();
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...questions];
+    getNewQuestion();
+};
 
 let currentQuestion = {};
 let acceptingAnswers = true;
