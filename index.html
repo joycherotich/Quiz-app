@@ -11,18 +11,20 @@
     <img src="https://codelikeadev.com/img/logo-3.png" alt="Code Like A Dev Logo" style="width:900px">
     <div class="container">
       <div id="home" class="page flex-center flex-column ">
-        <h1>Quick Quiz</h1>
+        <h1>Quiz Game</h1>
         
         <form>
           <label for="username">Username</label>
           <input type="text" name="username" id="username" />
           <label for="login">Login</label>
           <input type="text" name="login" id="login" />
+          <label for="search">Search</label>
+          <input type="text" name="search" id="search" />
           <button
             type="submit"
             id="saveScoreBtn"
             onclick="saveHighScore()"
-            disabled
+            enable
           >
             Save
           </button>
