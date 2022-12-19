@@ -2,8 +2,10 @@
 # project -directory
 # project-name
 Quiz-App
+
 # project-descrpition
 This is an application for answering questions 
+
 # Requirements
 
 npm install
@@ -16,7 +18,8 @@ create and style the game page
 fetch API to load questions from local JSON file
 
 # license 
-this project is licensed under MIT license
+This project is licensed under MIT license\
+
  ## 
  html
 javascript
