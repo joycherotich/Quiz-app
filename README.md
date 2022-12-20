@@ -1,27 +1,7 @@
-# Quiz-app
-# project -directory
-# project-name
-Quiz-App
+# Build a quiz app with HTML , CSS and javascript
 
-# project-descrpition
-This is an application for answering questions 
+# project description
+This an app to answer questions, earn points and recording the highest score.
 
-# Requirements
+# Prerequisites
 
-npm install
-install nvm.node
-create a db.json file in your directory.
-
-# instruction
-create and style the home page.
-create and style the game page
-fetch API to load questions from local JSON file
-
-# license 
-This project is licensed under MIT license\
-
- ## 
- html
-javascript
-# author 
-Joy Kirui
