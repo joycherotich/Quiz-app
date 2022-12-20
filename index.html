@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <img src="https://codelikeadev.com/img/logo-3.png" alt="Code Like A Dev Logo" style="width:900px">
+    <img src="https://codelikeadev.com/img/logo-3.png" alt="code like a dev" style="width:900px">
     <div class="container">
       <div id="home" class="page flex-center flex-column ">
         <h1>Quiz Game</h1>
@@ -20,14 +20,7 @@
           <input type="text" name="login" id="login" />
           <label for="search">Search</label>
           <input type="text" name="search" id="search" />
-          <button
-            type="submit"
-            id="saveScoreBtn"
-            onclick="saveHighScore()"
-            disable
-          >
-            Save
-          </button>
+          
         </form>
         <button onclick="playGame('')">Play</button>
         <button onclick="showHighScores()">High Scores</button>
@@ -36,6 +29,7 @@
 
       <div id="game" class="page hidden justify-center flex-column ">
         <button onClick="navigateTo('home')">Go Home</button>
+        
         <div id="hud">
           <h3 id="questionCounter">Question 1/10</h3>
           <h3 id="score">Score: 0</h3>
@@ -71,6 +65,14 @@
         <h1 id="finalScore">High Scores</h1>
         <ul id="highScoresList"></ul>
         <button onClick="navigateTo('home')">Go Home</button>
+        <button
+            type="submit"
+            id="saveScoreBtn"
+            onclick="saveHighScore()"
+            disable
+          >
+            Save
+          </button>
       </div>
     </div>
     <script src="index.js"></script>
